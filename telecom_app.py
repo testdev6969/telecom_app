@@ -15,7 +15,7 @@ class TelecomComplaintSystem:
             conn = self.connect()
             cursor = conn.cursor()
 
-            query = "SELECT id, customer_name, contact_number, category, description, status, created_at FROM complaints"
+            query = "SELECT * FROM complaints"
             cursor.execute(query)
 
             rows = cursor.fetchall()
